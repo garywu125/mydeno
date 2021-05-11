@@ -17,6 +17,8 @@ console.log("Files count: ", parseInt(output));
 let json = await fetch('https://httpbin.org/ip').then(resp => resp.json());
 console.log("Your ip: ", json.origin)
 
+
+
 // // your home dir
 // console.log("Your home: ", os.homedir());
 
