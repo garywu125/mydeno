@@ -5,7 +5,9 @@
  * 
  */
 
-import { red } from "fmt/colors.ts";
+ import { red,green } from "fmt/colors.ts";
+ import { helloWorld} from "/hello_world.ts"
 
 
 console.log(red("hello world"));
+console.log(green(helloWorld()));
