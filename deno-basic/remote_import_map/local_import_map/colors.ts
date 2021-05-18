@@ -7,6 +7,19 @@
 
 import { red,green } from "fmt/colors.ts";
 import { helloWorld} from "./hello_world.ts"
+import { validate, required, isNumber } from "https://deno.land/x/validasaur/mod.ts";
+
+const inputs = {
+  name: "",
+  age: "20"
+};
+
+const [ passes, errors ] = await validate(inputs, {
+  name: required,
+  age: [required, isNumber]
+});
+
+console.log({ passes, errors });
 
 console.log(red("hello world"));
 
